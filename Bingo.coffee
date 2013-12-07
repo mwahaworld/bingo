@@ -76,20 +76,20 @@ socketIO.on 'number', (bingoNum)=>
 					socketIO.emit 'bingo'
 
 			#diagnal \
-			if bingoWin.B.length > 0 and bingoWin.B[0] is 0\
-			and bingoWin.I.length > 0 and bingoWin.I[0] is 1\
-			and bingoWin.N.length > 0 and bingoWin.N[0] is 2\
-			and bingoWin.G.length > 0 and bingoWin.G[0] is 3\
-			and bingoWin.O.length > 0 and bingoWin.O[0] is 4
+			if bingoWin.B[0] isnt 0\
+			and bingoWin.I[1] isnt 0\
+			and bingoWin.N[2] isnt 0\
+			and bingoWin.G[3] isnt 0\
+			and bingoWin.O[4] isnt 0
 				console.log 'bingo diagnal 0..4'
 				socketIO.emit 'bingo'
 
 			#diagnal /
-			if bingoWin.B.length > 0 and bingoWin.B[0] is 4\
-			and bingoWin.I.length > 0 and bingoWin.I[0] is 3\
-			and bingoWin.N.length > 0 and bingoWin.N[0] is 2\
-			and bingoWin.G.length > 0 and bingoWin.G[0] is 1\
-			and bingoWin.O.length > 0 and bingoWin.O[0] is 0
+			if bingoWin.B[4] isnt 0\
+			and bingoWin.I[3] isnt 0\
+			and bingoWin.N[2] isnt 0\
+			and bingoWin.G[1] isnt 0\
+			and bingoWin.O[0] isnt 0
 				console.log 'bingo diagnal 4..0'
 				socketIO.emit 'bingo'
 
